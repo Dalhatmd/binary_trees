@@ -3,14 +3,16 @@
  * binary_tree_height - calculates the height of a binary tree
  *
  * @tree: root of the tree
+ *
+ * Return: size of binary tree or 0 if NULL
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int left_depth = 0;
-	int right_depth = 0;
+	int left_depth;
+	int right_depth;
 
 	if (tree == NULL)
-		return (-1);
+		return (0);
 
 	left_depth = binary_tree_height(tree->left);
 	right_depth = binary_tree_height(tree->right);
